@@ -1,0 +1,18 @@
+/* Home.css */
+.home-content {
+    --background: white; 
+    display: grid; 
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; 
+    
+  }
+  
+  .welcome-message {
+    color: #007bff; 
+    font-size: 2rem; 
+    font-weight: bold; 
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+    
+  }
