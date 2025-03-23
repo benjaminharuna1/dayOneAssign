@@ -1,29 +1,23 @@
-import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonFooter } from '@ionic/react';
-import './Home.css'
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import ExploreContainer from '../components/ExploreContainer';
+import './Home.css';
 
 const Home: React.FC = () => {
   return (
     <IonPage>
-      
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Welcome, Benjamin Haruna Bala</IonTitle>
+          <IonTitle>Blank</IonTitle>
         </IonToolbar>
       </IonHeader>
-
-      <IonContent className="home-content">
-        <div className="welcome-message">
-          Welcome to Bootcamp
-        </div>
+      <IonContent fullscreen>
+        <IonHeader collapse="condense">
+          <IonToolbar>
+            <IonTitle size="large">Blank</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+        <ExploreContainer />
       </IonContent>
-
-      {/* Footer */}
-      <IonFooter>
-        <IonToolbar>
-          <IonTitle>Day 1 Assignment</IonTitle>
-        </IonToolbar>
-      </IonFooter>
     </IonPage>
   );
 };
