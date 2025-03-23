@@ -1,5 +1,5 @@
 import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
+import { IonApp, IonHeader, IonToolbar, IonTitle, IonContent, IonFooter, IonPage, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
 
@@ -28,26 +28,42 @@ import '@ionic/react/css/display.css';
 
 /* import '@ionic/react/css/palettes/dark.always.css'; */
 /* import '@ionic/react/css/palettes/dark.class.css'; */
-import '@ionic/react/css/palettes/dark.system.css';
+// import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
 import './theme/variables.css';
 
+
+
+import React from 'react';
+import '@ionic/react/css/core.css';
 setupIonicReact();
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
-);
+const App: React.FC = () => {
+  return (
+    <IonApp>
+      <IonPage>
+        {/* Header with My Name */}
+        <IonHeader>
+          <IonToolbar style={{ backgroundColor: '#e0f7fa' }}> 
+            <IonTitle style={{ color: 'black' }}>Welcome, Benjamin Haruna Bala</IonTitle>
+          </IonToolbar>
+        </IonHeader>
+
+        {/* My Content */}
+        <IonContent fullscreen className="ion-padding" style={{ backgroundColor: '#f0f0f0', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', textAlign: 'center' }}>
+          <h2 style={{ color: 'blue', fontSize: '24px', fontWeight: 'bold' }}>Welcome to Bootcamp</h2>
+        </IonContent>
+
+        {/* My Footer */}
+        <IonFooter>
+          <IonToolbar>
+            <IonTitle size="small" style={{ textAlign: 'center' }}>Day 1 Assignment</IonTitle>
+          </IonToolbar>
+        </IonFooter>
+      </IonPage>
+    </IonApp>
+  );
+};
 
 export default App;
